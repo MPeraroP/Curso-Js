@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Estrangeiro ou Brasileiro?</h1>
+    Qual pais Você mora ? <input type="text" name="txtt" id="txtt">
+    <input type="button" value="Verificar" onclick="veri()">
+    <div id="res">
+
+    </div>
+    <script>
+        function veri(){
+            var paiss = document.getElementById('txtt')
+            var res = document.querySelector('div#res')
+            var pais = String(paiss.value)
+
+            res.innerText = `Seu pais é ${pais}`
+            if(pais == 'Brasil'){
+                res.innerHTML += '<p>Você é Brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é Estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
